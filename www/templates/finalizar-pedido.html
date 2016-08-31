@@ -1,0 +1,41 @@
+<ion-view>
+    <ion-nav-title>Estamos quase lá...</ion-nav-title>
+    <ion-content>
+
+        <div class="card">
+            <div class="item item-divider">
+                <h2>{{carroPedido.nome}}</h2>
+                <h4>R{{carroPedido.preco | currency}}
+                    <h4>
+            </div>
+            <div class="item item-text-wrap">
+
+                <div class="list">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Nome</span>
+                        <input type="text" placeholder="Digite aqui seu nome..." ng-model="pedido.nome">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Endereço</span>
+                        <input type="text" placeholder="Informe seu endereço..." ng-model="pedido.endereco">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Telefone</span>
+                        <input type="text" placeholder="Informe seu telefone..." ng-model="pedido.telefone">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Email</span>
+                        <input type="text" placeholder="seuemail@email.com" ng-model="pedido.email">
+                    </label>
+                </div>
+
+            </div>
+      
+        </div>
+
+        <a class="button button-positive button-full" ng-click="finalizarPedido()">
+            <i class="ion-paper-airplane"></i> Enviar
+        </a>
+
+    </ion-content>
+</ion-view>

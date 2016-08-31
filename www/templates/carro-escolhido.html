@@ -1,0 +1,48 @@
+<ion-view>
+    <ion-nav-title>Carro Escolhido</ion-nav-title>
+    <ion-content>
+        <div class="card">
+            <div class="item item-divider">
+                {{carroEscolhido.nome}}
+            </div>
+            <div class="item item-text-wrap">
+
+                <ul class="list">
+
+                    <li class="item item-toggle" ng-repeat="acessorio in listaAcessorios">
+                        {{acessorio.nome}} - R{{acessorio.preco | currency}}
+                        <label class="toggle toggle-calm">
+                            <input type="checkbox" ng-model="isMarcado" ng-click="mudou(acessorio, isMarcado)">
+                            <div class="track">
+                                <div class="handle"></div>
+                            </div>
+                        </label>
+                    </li>
+
+                </ul>
+
+            </div>
+            <div class="item item-divider">
+                Valor Total: R{{carroEscolhido.preco | currency}}
+            </div>
+        </div>
+
+        <a class="button button-positive button-full" href="#/finalizarpedido/{{carroEscolhido}}">Finalizar Pedido </a>
+
+        <div class="list card">
+            <a href="#" class="item item-icon-left">
+                <i class="icon ion-android-globe"></i> www.aluracar.com.br
+            </a>
+            <a href="#" class="item item-icon-left">
+                <i class="icon ion-at"></i> contato@aluracar.com.br
+            </a>
+            <a href="#" class="item item-icon-left">
+                <i class="icon ion-ios-telephone"></i> (62) 3290-1422
+            </a>
+            <a href="#" class="item item-icon-left">
+                <i class="icon ion-location"></i> Como chegar?
+            </a>
+        </div>
+
+    </ion-content>
+</ion-view>
